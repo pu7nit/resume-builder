@@ -1,0 +1,21 @@
+services:
+  resume-builder:
+    build: .
+    image: resume-builder:latest
+    container_name: resume-builder
+    restart: unless-stopped
+    init: true
+    ports:
+      - "${APP_PORT:-3000}:3000"
+    environment:
+      # Leave APP_PASSWORD empty for local-only use; set it to require a login.
+      APP_PASSWORD: "${APP_PASSWORD:-}"
+      TZ: "${TZ:-UTC}"
+    volumes:
+      # Resumes live in SQLite on this volume, so rebuilds never lose data.
+      - resume-data:/app/data
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  resume-data:

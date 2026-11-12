@@ -1,0 +1,19 @@
+{
+  "name": "resume-builder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal resume builder: live A4 preview, switchable templates, print-to-PDF export, SQLite persistence, Docker-ready.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch server.js",
+    "verify": "node scripts/verify.mjs",
+    "docker:build": "docker build -t resume-builder:latest .",
+    "docker:up": "docker compose up -d --build",
+    "docker:logs": "docker compose logs -f",
+    "docker:down": "docker compose down"
+  }
+}

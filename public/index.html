@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="color-scheme" content="dark" />
+    <title>Resume Forge — personal resume builder</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style id="page-style"></style>
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand" title="Resume Forge">
+          <span class="brand-mark" aria-hidden="true">▤</span>
+          <span class="brand-text">resume<em>forge</em></span>
+        </div>
+
+        <div class="doc-switcher">
+          <label class="sr-only" for="resume-select">Switch resume</label>
+          <select id="resume-select"></select>
+          <button class="icon-btn" id="btn-new" title="New resume" aria-label="New resume">+</button>
+          <button class="icon-btn" id="btn-duplicate" title="Duplicate resume" aria-label="Duplicate resume">⧉</button>
+          <button class="icon-btn danger" id="btn-delete" title="Delete resume" aria-label="Delete resume">✕</button>
+        </div>
+
+        <label class="title-field">
+          <span class="sr-only">Resume name</span>
+          <input id="title-input" type="text" maxlength="120" placeholder="Resume name" autocomplete="off" />
+        </label>
+
+        <div class="topbar-actions">
+          <span id="save-status" class="save-status" data-state="idle">Ready</span>
+
+          <div class="menu-wrap">
+            <button class="icon-btn" id="btn-more" aria-haspopup="true" aria-expanded="false" title="More actions">
+              ⋯
+            </button>
+            <div class="menu" id="more-menu" hidden>
+              <button type="button" id="btn-export">Export JSON backup</button>
+              <button type="button" id="btn-import">Import JSON backup</button>
+              <a class="menu-link" id="btn-open" href="/" target="_blank" rel="noopener">Open in new tab</a>
+              <button type="button" id="btn-logout" hidden>Log out</button>
+            </div>
+          </div>
+
+          <button class="btn primary" id="btn-print" title="Print or save as PDF">Export PDF</button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="editor-pane">
+          <nav class="tabs" aria-label="Editor views">
+            <button type="button" class="tab is-active" data-view="content">Content</button>
+            <button type="button" class="tab" data-view="design">Design &amp; sections</button>
+            <span class="tabs-hint" id="dirty-hint"></span>
+          </nav>
+          <div class="editor-scroll">
+            <div id="editor"></div>
+          </div>
+        </section>
+
+        <aside class="preview-pane" aria-label="Resume preview">
+          <div class="preview-head">
+            <span class="preview-title">Live preview</span>
+            <span class="page-chip" id="page-chip">1 page</span>
+            <span class="preview-hint">Ctrl/⌘ + P prints this page</span>
+          </div>
+          <div class="preview-scroll" id="preview-scroll">
+            <div class="paper-frame" id="paper-frame">
+              <div class="paper" id="paper"></div>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <input type="file" id="import-file" accept="application/json,.json" hidden />
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
