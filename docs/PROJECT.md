@@ -146,22 +146,22 @@ present in the body are replaced.
 ```jsonc
 {
   "basics": {
-    "name": "Jagana Ritvik",
-    "headline": "Data Analyst · B.Tech Computer Science & Engineering",
-    "email": "ritvikjagana655@gmail.com",
-    "phone": "+91 88853 60071",
-    "location": "Visakhapatnam, Andhra Pradesh, India",
-    "website": "https://portfolio-jagana-ritvik.vercel.app",
+    "name": "Alex Morgan",
+    "headline": "Data Analyst · B.Sc. Information Systems",
+    "email": "alex.morgan@example.com",
+    "phone": "+1 (555) 013-4827",
+    "location": "Portland, Oregon",
+    "website": "https://alexmorgan.example.com",
     "photo": "",                       // data URL (JPEG, ≤720 px) or ""
-    "links": [{ "label": "GitHub", "url": "https://github.com/pu7nit" }]
+    "links": [{ "label": "GitHub", "url": "https://github.com/example" }]
   },
   "summary": "Free text. Blank lines start a new paragraph.",
   "experience": [{
     "id": "uuid",
-    "role": "Junior Data Analyst",
-    "company": "Cognifyz Technologies",
-    "location": "Remote",
-    "start": "Mar 2026",
+    "role": "Data Analyst",
+    "company": "Northwind Analytics",
+    "location": "Portland, OR",
+    "start": "Mar 2024",
     "end": "",                        // ignored when current is true
     "current": true,
     "bullets": ["One achievement per string"]
@@ -172,7 +172,7 @@ present in the body are replaced.
   }],
   "education": [{
     "id": "uuid", "degree": "...", "school": "...", "location": "...",
-    "start": "...", "end": "...", "details": "CGPA 7.0"
+    "start": "...", "end": "...", "details": "GPA 3.7/4.0"
   }],
   "skills": [{
     "id": "uuid", "group": "Data & Analytics",
@@ -255,7 +255,7 @@ Example:
 curl -s http://localhost:3000/api/resumes
 curl -s -X POST http://localhost:3000/api/resumes \
   -H 'content-type: application/json' \
-  -d '{"title":"Backend role","data":{"basics":{"name":"Jagana Ritvik"}}}'
+  -d '{"title":"Backend role","data":{"basics":{"name":"Alex Morgan"}}}'
 curl -s -X PUT http://localhost:3000/api/resumes/<id> \
   -H 'content-type: application/json' \
   -d '{"settings":{"template":"slate","accent":"#12473a"}}'
@@ -437,7 +437,7 @@ printed page has correct margins on every page, not just the first. `Ctrl/Cmd+P`
 {
   "app": "resume-builder",
   "version": 1,
-  "title": "Jagana Ritvik — Data Analyst",
+  "title": "Alex Morgan — Data Analyst",
   "data": { /* resume document */ },
   "settings": { /* settings */ },
   "exported_at": "2026-11-11T13:00:00.000Z"

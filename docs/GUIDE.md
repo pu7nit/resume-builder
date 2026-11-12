@@ -21,7 +21,7 @@ and no database server. Your resumes live in a single SQLite file.
 Project folder (shortened to `resume-builder/` below):
 
 ```
-C:\Users\jagana\Documents\resume-builder
+C:\Users\<you>\Documents\resume-builder
 ```
 
 ---
@@ -31,7 +31,7 @@ C:\Users\jagana\Documents\resume-builder
 Open a terminal **in the project folder** (PowerShell, Windows Terminal or Git Bash):
 
 ```powershell
-cd C:\Users\jagana\Documents\resume-builder
+cd C:\Users\<you>\Documents\resume-builder
 docker compose up -d --build
 ```
 
@@ -44,8 +44,8 @@ What the command does:
 - `-d` runs it in the background, so you get your terminal back.
 - `docker compose ps` shows it as `Up … (healthy)` after about five seconds.
 
-On the very first start the app seeds one resume with the content from your existing DOCX, titled
-**“Jagana Ritvik — Data Analyst”**.
+On the very first start the app seeds one sample resume, titled **“Alex Morgan — Data Analyst”**,
+with fictional content so every template has something realistic to show.
 
 **Rebuild whenever the code changes** — `docker compose up -d` alone reuses the old image:
 
@@ -69,7 +69,7 @@ not fine on a shared network.
 ## 3. Start it without Docker
 
 ```powershell
-cd C:\Users\jagana\Documents\resume-builder
+cd C:\Users\<you>\Documents\resume-builder
 npm start            # http://localhost:3000
 ```
 

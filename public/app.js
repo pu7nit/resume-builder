@@ -659,7 +659,7 @@ function renderContent() {
       'Basics',
       'The header block every template starts with.',
       `<div class="grid two">
-        ${field('Full name', 'basics.name', b.name, { placeholder: 'Jagana Ritvik' })}
+        ${field('Full name', 'basics.name', b.name, { placeholder: 'Alex Morgan' })}
         ${field('Headline', 'basics.headline', b.headline, { placeholder: 'Data Analyst' })}
         ${field('Email', 'basics.email', b.email, { placeholder: 'you@email.com', type: 'email' })}
         ${field('Phone', 'basics.phone', b.phone, { placeholder: '+91 90000 00000', type: 'tel' })}

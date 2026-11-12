@@ -43,8 +43,8 @@ cd resume-builder
 docker compose up -d --build
 ```
 
-Open <http://localhost:3000>. The first launch seeds a resume with the content from
-`Ritvik Jagana - Data Analyst Resume.docx`, so you start from real material.
+Open <http://localhost:3000>. The first launch seeds one complete sample resume — a fictional
+analyst — so every template has realistic content to display. Edit it or delete it and start blank.
 
 Stop it with `docker compose down`. Data survives in the `resume-data` volume; `docker compose
 down -v` deletes the resumes too.
